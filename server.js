@@ -4,6 +4,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const cors = require('cors');
+app.use(
+  cors({
+    origin: '*'
+  })
+);
+
 const port = 3000;
 
 app.get('/', (req, res) => {
