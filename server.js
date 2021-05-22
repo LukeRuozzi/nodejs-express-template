@@ -1,12 +1,13 @@
 const express = require('express');
-var cors = require('cors');
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 const port = 3000;
 
-app.use(cors());
-
 app.get('/', (req, res) => {
-  res.json({ Hello: 'World 1!' });
+  res.json({ Hello: 'World 11!' });
 });
 
 app.listen(port, () => {
