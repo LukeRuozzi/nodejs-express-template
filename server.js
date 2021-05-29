@@ -1,19 +1,19 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const cors = require('cors');
-app.use(
-  cors({
-    origin: '*'
-  })
-);
-
 const port = 3000;
 
-app.get('/', (req, res) => {
+var corsOptions = {
+  origin: false
+};
+
+app.options('/', cors(corsOptions));
+
+app.get('/', cors(corsOptions), (req, res) => {
   res.json({ Hello: 'World 11!' });
 });
 
