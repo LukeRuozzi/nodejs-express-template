@@ -7,13 +7,9 @@ app.use(express.urlencoded({ extended: false }));
 
 const port = 3000;
 
-var corsOptions = {
-  origin: false
-};
+app.options('/', cors());
 
-app.options('/', cors(corsOptions));
-
-app.get('/', cors(corsOptions), (req, res) => {
+app.get('/', cors(), (req, res) => {
   res.json({ Hello: 'World 11!' });
 });
 
