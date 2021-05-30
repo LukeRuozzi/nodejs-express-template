@@ -7,10 +7,10 @@ app.use(express.urlencoded({ extended: false }));
 
 const port = 3000;
 
-app.options('/', cors());
+app.options('/api', cors());
 
-app.get('/', cors(), (req, res) => {
-  res.json({ Hello: 'World 11!' });
+app.get('/api', cors(), (req, res) => {
+  res.json({ Hello: 'World!' });
 });
 
 app.listen(port, () => {
