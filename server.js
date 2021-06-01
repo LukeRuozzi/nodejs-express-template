@@ -13,6 +13,6 @@ app.get('/api', cors(), (req, res) => {
   res.json({ Hello: 'World!!' });
 });
 
-app.listen(port1, () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
