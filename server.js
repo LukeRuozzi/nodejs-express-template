@@ -10,7 +10,7 @@ const port = 3000;
 //app.options('/api', cors());
 
 app.get('/api', cors(), (req, res) => {
-  res.json({ Hello: 'World!' });
+  res.json({ Hello: 'World!!' });
 });
 
 app.listen(port, () => {
